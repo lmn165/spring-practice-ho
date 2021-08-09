@@ -19,7 +19,7 @@ public class MyFriends {
     protected final String phone;
 }
 
-class UnivFriend extends Friend{
+final class UnivFriend extends Friend{
     private String major;
     public UnivFriend(String name, String major, String phone){
         super(name, phone);
@@ -27,16 +27,12 @@ class UnivFriend extends Friend{
     }
 
     @Override
-    public String toString() {
-        return "대학 동기{" +
-                "이름: '" + name + '\'' +
-                ", 전화: '" + phone + '\'' +
-                ", 전공: '" + major + '\'' +
-                '}';
+    public final String toString() {
+        return String.format("대학 동기: %s %s %s", name, major, phone);
     }
 }
 
-class CompFriend extends Friend{
+final class CompFriend extends Friend{
     private String department;
     public CompFriend(String name, String department, String phone){
         super(name, phone);
@@ -44,11 +40,7 @@ class CompFriend extends Friend{
     }
 
     @Override
-    public String toString() {
-        return "직장 동료{" +
-                "이름: '" + name + '\'' +
-                ", 전화: '" + phone + '\'' +
-                ", 부서: '" + department + '\'' +
-                '}';
+    public final String toString() {
+        return String.format("직장 동료: %s %s %s", name, department, phone);
     }
 }

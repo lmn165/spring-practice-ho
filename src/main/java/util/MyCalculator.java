@@ -1,6 +1,6 @@
 package util;
 
-public class MyCalculator {
+public final class MyCalculator {
     public String add(String num1, String num2){
 //        return String.format("num1 + num2 = %d", getInt(num1) + getInt(num2));
         return "" + (getInt(num1) + getInt(num2));

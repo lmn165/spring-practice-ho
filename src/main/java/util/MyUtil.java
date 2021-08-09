@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
 
-public class MyUtil {
+public final class MyUtil {
     public String howLongRemain(LocalDate today, String month, String date){
         Period left = Period.between(today,
                 LocalDate.of(today.now().getYear(), Integer.parseInt(month), Integer.parseInt(date)));

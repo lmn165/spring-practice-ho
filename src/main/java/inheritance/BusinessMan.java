@@ -1,7 +1,6 @@
 package inheritance;
 
 import lombok.Data;
-import lombok.ToString;
 
 @Data
 class Man{
@@ -9,8 +8,7 @@ class Man{
 }
 
 @Data
-public class BusinessMan extends Man {
+final public class BusinessMan extends Man {
     private final String company;
     private final String position;
-
 }

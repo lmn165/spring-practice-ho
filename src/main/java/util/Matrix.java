@@ -1,6 +1,6 @@
 package util;
 
-public class Matrix {
+public final class Matrix {
     public int[][] creatMatrix(int row, int column){
         int[][] matrix = new int[row][column];
         for (int i=0, k=1; i<row; i++){
