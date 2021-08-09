@@ -22,12 +22,12 @@ class ObjectArrayTest {
     }
 
     @Test
-    void test_createCart(){
-        String s= "";
-        for (Product i : objectArray.createCart()){
-            if(i.getProductId() == 505){
-                assertEquals("Fairy-tale book", i.toString());
-            }
-        }
+    void testCreateCart(){
+//        for (Product p : objectArray.createCart()){
+//            if(p.getProductId() == 505){
+//                assertEquals("Fairy-tale book", p.getDescription());
+//            }
+//        }
+        assertEquals("Coffee", objectArray.createCart()[0].getDescription());
     }
 }

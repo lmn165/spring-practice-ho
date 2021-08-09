@@ -2,17 +2,14 @@ package util;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @RequiredArgsConstructor
 @Getter
+@ToString
 class Product {
     private final int productId;
     private final String description;
-
-    @Override
-    public String toString() {
-        return description;
-    }
 }
 
 public class ObjectArray {
