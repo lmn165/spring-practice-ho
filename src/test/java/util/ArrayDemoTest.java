@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 class ArrayDemoTest {
@@ -20,7 +20,7 @@ class ArrayDemoTest {
     }
 
     @Test
-    void fill() {
+    void test_fill() {
         String s = "";
         for(int i: arrayDemo.fill(7)){
             s += i;
@@ -32,14 +32,22 @@ class ArrayDemoTest {
     }
 
     @Test
-    void copy() {
+    void test_copy() {
         String s = "";
-        for(int i: arrayDemo.copy(arrayDemo.fill(7))){
+        for(int i: arrayDemo.copy(new int[]{7, 7, 7, 7, 7})){
             s += i;
         }
         assertEquals("07700", s);
 //        for(int i : arrayDemo.copy(arrayDemo.fill(7))){
 //            assertEquals(7, i);
 //        }
+    }
+    @Test
+    void test_createIntegerArray(){
+        String s = "";
+        for (int i : arrayDemo.createIntegerArray(1,6)){
+            s += i;
+        }
+        assertEquals("12345", s);
     }
 }

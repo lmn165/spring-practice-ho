@@ -1,7 +1,5 @@
 package util;
 
-import lombok.Data;
-
 import java.util.Arrays;
 
 public class ArrayDemo {
@@ -15,5 +13,12 @@ public class ArrayDemo {
         int[] copyArray = new int[5];
         System.arraycopy(arr, 0, copyArray, 1, 2);
         return copyArray;
+    }
+    public int[] createIntegerArray(int start, int end){
+        int[] integerArray = new int[end-start];
+        for (int i=0; i < integerArray.length; i++){
+            integerArray[i] = start++;
+        }
+        return integerArray;
     }
 }

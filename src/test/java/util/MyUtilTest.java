@@ -8,7 +8,6 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 @ExtendWith(MockitoExtension.class)
 class MyUtilTest {

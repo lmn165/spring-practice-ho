@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
-import java.time.format.DateTimeFormatter;
 
 public class MyUtil {
     public String howLongRemain(LocalDate today, String month, String date){
